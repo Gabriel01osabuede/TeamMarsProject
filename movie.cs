@@ -1,15 +1,14 @@
 using System;
 using System.Collections.Generic;
 
-namespace TeamMarsProject
+namespace week4project
 {
+    public class Movie
+    {
 
- public class Movie
- {
         public string _title;
         public string _studio;
         public string _ratings;
-        
 
         public Movie(string title, string studio, string ratings)
         {
@@ -34,7 +33,7 @@ namespace TeamMarsProject
             List<Movie> PgMovies = new List<Movie>();
             foreach (var movie in movies)
             {
-                if(movie._ratings == "PG13")
+                if(movie._ratings == "PG")
                 {
                     PgMovies.Add(movie);
                 }
@@ -42,5 +41,5 @@ namespace TeamMarsProject
             return PgMovies;
         }
 
- }
+    }
 }
